@@ -189,9 +189,17 @@
     color: #8b6161;
 }
 
-  .tabela {
-    padding: 10px 20px;
-  }
+ .tabela {
+    list-style: none;
+    padding: 5px 35px;
+    display: flex;
+    margin: 0;
+ }
+
+ .tabela2 {
+    list-style-type: none;
+    padding-left: 100px;
+ }
 
   .lista {
     
