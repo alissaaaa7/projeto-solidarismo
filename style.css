@@ -1,6 +1,3 @@
-
-
-
 /* header */
 
   header {
@@ -184,6 +181,7 @@
 }
 
 #link {
+    text-decoration: none;
     color: #2c0202;
 }
 
@@ -197,7 +195,7 @@
 
   .lista {
     
-    padding: 5px 35px;
+    padding: 5px 60px;
   }
   
   .flash-animation {
