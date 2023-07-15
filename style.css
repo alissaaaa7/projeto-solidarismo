@@ -1,228 +1,155 @@
-/* header */
+/* resets */
+body { margin:0px; padding:0px; }
 
-  header {
-    background-color: #4d0101;
-    box-shadow: 0px 3px 10px #464646;
+/* main */
+header {
+    height: 360px;
+    z-index: 10;
+}
+.header-banner {
+    background-color: #003049;
+    background-image: url('https://cdn.discordapp.com/attachments/990277969094279178/1129869748168036484/shutterstock_613074479.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
 }
 
-.nav-bar {
-    margin: 0%;
-    display: inline-flex;
-    justify-content: left;
-    padding: 1.2rem 3rem;
-}
-
-.nav-list ul {
-    
-    padding: 0;
-    list-style-type: none;
-}
-
-.nav-list ul li {
-    display: inline;
-    position: relative;
-}
-
-.nav-list ul li a {
-    text-decoration: none;
-    padding: 10px;
+header h1 {
+    background-color: #00607371;
     color: #fff;
-    display: inline-block;
-}
-
-.nav-list a {
-    
-    padding-bottom: 70px;
-}
-
-.nav-list ul li a:hover {
-    color: #8b6161;
-}
-
-/*sub menu*/
-.nav-bar ul ul{
-    font-style: inherit;
-    width: 230px;
-    background-color: #4d0101;
-    display: none;
+    padding: 0 1rem;
     position: absolute;
-
+    top: 2rem; 
+    left: 2rem;
 }
 
-.nav-list ul li:hover ul {
-    display: block;
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
 }
 
-.nav-list ul ul li a {
-    display: block;
+nav {
+    width: 100%;
+    height: 60px;
+    background: #003049;
+    position: fabsolute;
+    z-index: 10;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
+nav div {
+    color: white;
+    font-size: 2rem;
+    line-height: 60px;
+    position: absolute;
+    top: 0;
+    left: 2%;
+    visibility: hidden;
+}
+.visible-title {
+    visibility: visible;
 }
 
-.logo h1 {
-    color: #fff;
+nav ul { 
+    list-style-type: none;
+    margin: 0 2% auto 0;
+    padding-left: 0;
+    text-align: right;
+    max-width: 100%;
+}
+nav ul li { 
+    display: inline-block; 
+    line-height: 60px;
+    margin-left: 20px;
+}
+nav ul li a {
+    text-decoration: none; 
+    color: #c1c1df;
 }
 
-.nav-list {
-    display: flex;
-    align-items: center;
-}
-
-.nav-list ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-}
-
-.nav-item {
-    margin: 0 15px;
-}
-
-.nav-link {
-    text-decoration: none;
-    font-size: 1.15rem;
-    color: #fff;
-    font-weight: 400;
-}
-
-.login-button button {
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    background-color: #0187a7;
-}
-
-.login-button button a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 500;
-    font-size: 1.1rem;
-}
-
-.mobile-menu-icon {
-    display: none;
-}
-
-.mobile-menu {
-    display: none;
-}
-
-@media screen and (max-width: 730px) {
-    .nav-bar {
-        padding: 1.5rem 4rem;
+    nav ul li a:hover {
+        color: #707081;
     }
-    .nav-item {
-        display: none;
+
+/* demo content */
+body { 
+    color: #292f36;
+    font-family: helvetica;
+    line-height: 1.6;
+}
+.content{ 
+    margin: 0 auto;
+    padding: 4rem 0;
+    width: 960px;
+    max-width: 100%;
+}
+article {
+    float: left;
+    width: 720px;
+}
+article p:first-of-type {
+    margin-top: 0;
+}
+aside {
+    float: right;
+    width: 120px;
+}
+p img {
+    max-width: 100%;
+}
+
+@media only screen and (max-width: 960px) {
+    .content{ 
+        padding: 2rem 0;
     }
-    .login-button {
-        display: none;
+    article {
+        float: none;
+        margin: 0 auto;
+        width: 96%;
     }
-    .mobile-menu-icon {
-        display: block;
+    article:last-of-type {  
+        margin-bottom: 3rem;
     }
-    .mobile-menu-icon button {
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-    }
-    .mobile-menu ul {
-        display: flex;
-        flex-direction: column;
+    aside {  
+        float: none;
         text-align: center;
-        padding-bottom: 1rem;
-    }
-    .mobile-menu .nav-item {
-        display: block;
-        padding-top: 1.2rem;
-    }
-    .mobile-menu .login-button {
-        display: block;
-        padding: 1rem 2rem;
-    }
-    .mobile-menu .login-button button {
         width: 100%;
     }
-    .open {
-        display: block;
-    }
 }
 
-/* body */
-
-* {
-    margin: 0;
-    padding: 0;
-    color: #000;
-    font-family: 'Pacifico', sans-serif;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  body {
-   background-color: #fff;
-  }
-  
-  h1, h2 {
-    font-family: 'Pacifico', sans-serif;
-    text-shadow: 0 2px 2px rgba(0,0,0,0.3);
-    padding: 5px;
-    margin: 15px;
-  }
-
-  p {
-    padding: 15px 20px;
-    font-size: 17px;
-  }
+.titulo {
+    font-size: 35px;
+}
 
 .paragrafo {
     font-size: 18px;
+    padding-left: 50px;
+}
+
+.indice {
+    padding-left: 0px;
+    
+}
+
+.indice a {
+    
+    color: #003049;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.indice a:hover {
+color: #707081;
 }
 
 #link {
+    color: #003049;
     text-decoration: none;
-    color: #2c0202;
 }
 
-#link a:hover {
-    color: #8b6161;
+#link:hover {
+    color: #707081;
 }
-
- .tabela {
-    list-style: none;
-    padding: 5px 35px;
-    display: flex;
-    margin: 0;
- }
-
- .tabela2 {
-    list-style-type: none;
-    padding-left: 100px;
- }
-
-  .lista {
-    
-    padding: 5px 60px;
-  }
-  
-  .flash-animation {
-    animation: flash 10s infinite;
-  }
-  
-  .flex {
-  
-    width: 100%;
-  }
-  
-  @keyframes flash {
-    0% {
-      opacity: 0.5;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0.5;
-    }
-  }
